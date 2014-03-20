@@ -31,7 +31,7 @@ KeyboardInputManager.prototype.emit = function (event, data) {
   }
 };
 
-default_keyboard_map = 'qwerty';
+var default_keyboard_map = 'qwerty';
 KeyboardInputManager.prototype.listen = function (default_keyboard_map) {
   var self = this;
 
