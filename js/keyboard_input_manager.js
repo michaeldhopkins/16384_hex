@@ -31,22 +31,10 @@ KeyboardInputManager.prototype.emit = function (event, data) {
   }
 };
 
-var default_keyboard_map = 'dvorak';
-KeyboardInputManager.prototype.listen = function (default_keyboard_map) {
+KeyboardInputManager.prototype.listen = function () {
   var self = this;
-
-  var map_qwerty = {
-    39: 2, // Right
-    37: 3, // Left
-    87: 0, // W
-    69: 1, // E
-    65: 2, // A
-    68: 3, // D
-    90: 4, // Z
-    88: 5  // X
-  };
   
-  var map_dvorak = {
+  var map = {
     39: 2, // Right
     37: 3, // Left
     188: 0, // W
@@ -56,12 +44,6 @@ KeyboardInputManager.prototype.listen = function (default_keyboard_map) {
     186: 4, // Z
     81: 5  // X
   };
-
-  if (default_keyboard_map === 'dvorak') {
-    map = map_dvorak;
-  } else {
-    map = map_qwerty;
-  }
 
   document.addEventListener("keydown", function (event) {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
