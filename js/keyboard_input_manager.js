@@ -31,7 +31,7 @@ KeyboardInputManager.prototype.emit = function (event, data) {
   }
 };
 
-var default_keyboard_map = 'qwerty';
+var default_keyboard_map = 'dvorak';
 KeyboardInputManager.prototype.listen = function (default_keyboard_map) {
   var self = this;
 
